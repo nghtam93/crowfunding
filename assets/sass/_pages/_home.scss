@@ -40,9 +40,10 @@
     }
 }
 .box__advanced__search{
-    background-color: rgba(255, 255, 255, .9);
+    background-color: #ECF9FA;
     border-radius: 5px;
     color: #333333;
+    max-width: 660px;
     .box{
         &__header{
             padding: 40px 15px 20px;
@@ -89,6 +90,26 @@
 .product__item{
     margin-bottom: 30px;
     border-bottom: 1px solid #ccc;
+    &.-lenders{
+        .el__list{
+            li{
+                label{
+                    margin-bottom: 10px;
+                }
+                .el__star{
+                    font-size: 15px;
+                    margin-right: 20px;
+                    color: #F69D38;
+                }
+                p{
+                    top: 8px;
+                    font-size: 24px;
+                    line-height:24px;
+                }
+            }
+            
+        }
+    }
     &:first-child{
         border-top: 1px solid #ccc;
         padding-top: 30px;
@@ -115,6 +136,7 @@
             font-size: 24px;
             font-weight: 500;
             line-height: 32px;
+            margin-top: 5px;
             margin-bottom: 5px;
             a{
                 color: #000;
@@ -125,6 +147,8 @@
             flex-wrap: wrap;
             margin-bottom: 15px;
             li{
+                display: flex;
+                align-items: center;
                 border: 1px solid $color_secondary;
                 border-radius: 40px;
                 font-size: 12px;
@@ -150,7 +174,7 @@
                 font-weight: 700;
                 line-height: 16px;
                 margin-bottom: 0;
-                padding: 5px 20px;
+                padding: 0px 20px;
                 color: #000;
                 &:last-child{
                     border-right: 3px solid $color_secondary;
@@ -162,6 +186,8 @@
                     margin-bottom: 5px;
                 }
                 p{
+                    position: relative;
+                    top: 10px;
                     font-size: 32px;
                     line-height:32px;
                 }
@@ -180,6 +206,7 @@
         .el__list li {
             padding: 0 15px;
             p {
+                top: 7px;
                 font-size: 22px;
                 line-height: 22px;
             }
@@ -189,7 +216,11 @@
         }
     }
     @media ( max-width: 767px ) {
-        padding-bottom: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        .el__title {
+            margin-top: 0;
+        }
         &:first-child {
             border-top: 0;
             padding-top: 0;
@@ -199,7 +230,6 @@
         }
     }
     @media ( max-width: 575px ) {
-        
         .el__list{
             align-items: center;
             justify-content: center;

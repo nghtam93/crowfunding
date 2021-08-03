@@ -1,6 +1,12 @@
+body:not(.home) .sc-footer{
+    background-color: #000;
+    .sc-copyright{
+        color: #797979;
+    }
+}
 .sc-footer{
     padding: 155px 0 40px;
-    background-color: $color_primary;
+    background-color:$color_primary;
     color: #fff;
 
     .sc-copyright{
@@ -67,10 +73,14 @@
     li{
         position:relative;
         padding: 0 20px;
-        &::after{
-            width: 2px;
+        &:not(:last-child)::after{
+            content: "";
+            width: 1px;
             height: 100%;
             background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
     a{
@@ -88,6 +98,9 @@
             padding: 20px 20px;
             text-align: center;
             border-bottom: 1px solid #ccc;
+            &::after{
+                display: none;
+            }
         }
     }
 }
