@@ -1,12 +1,29 @@
+@keyframes stuckMoveDown{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
+}
+@keyframes stuckMoveUp{
+    0%{transform:translateY(100%)}
+    100%{transform:translateY(0)}
+}
+@keyframes stuckFadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
 .header{
-    position:sticky;
+    position: relative;
     top: 0;
+    left: 0;
+    right: 0;
     padding: 25px 0;
     background: #fff;
     z-index: 99;
-    &.active{
+    &.is-sticky{
+        position: fixed;
         box-shadow: 0px 2px 5px #ccc;
+        animation: stuckMoveDown .6s;
     }
+
     &--logo{
         img{
             max-height: 40px;
@@ -16,6 +33,8 @@
         border: 0;
         font-size: 24px;
         margin-left: 30px;
+        padding: 0;
+        line-height: 24px;
         &:focus, &:active{
             outline: 0;
             box-shadow: none;
@@ -29,14 +48,18 @@
         &--logo img {
             max-height: 36px;
         }
-        .icon-search {
-            margin-left: 15px;
+        &__search--btn {
+            margin-left: 10px;
         }
     }
-    @media ( max-width: 992px ) {
+    @media ( max-width: 991px ) {
+        padding: 12px 0;
         &__brand {
             flex-grow: 1;
             text-align: center;
+        }
+        &__search--btn {
+            margin-left: 0;
         }
     }
 }

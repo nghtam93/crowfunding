@@ -1,8 +1,45 @@
 jQuery(function($) {
-    // Menu
-    //-------------------------------------------------
     $(document).ready(function(){
 
+        //-------------------------------------------------
+        // Sticky navbar
+        //-------------------------------------------------
+        // Custom function which toggles between sticky class (is-sticky)
+        var stickyToggle = function (sticky, stickyWrapper, scrollElement,stickyHeight) {
+            var stickyTop = stickyWrapper.offset().top;
+
+            if (scrollElement.scrollTop() >= stickyTop + stickyHeight) {
+                stickyWrapper.height(stickyHeight);
+                sticky.addClass("is-sticky");
+            }
+
+
+            if (scrollElement.scrollTop() <= stickyTop) {
+                sticky.removeClass("is-sticky");
+                stickyWrapper.height('auto');
+            }
+        };
+        $('[data-toggle="sticky-onscroll"]').each(function () {
+            var sticky = $(this);
+            var stickyWrapper = $('<div>').addClass('sticky-wrapper'); 
+            sticky.before(stickyWrapper);
+            sticky.addClass('sticky');
+            var stickyHeight = sticky.outerHeight();
+
+            var t
+            clearTimeout(t);
+            $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                t = setTimeout(function() { t = undefined;
+                stickyToggle(sticky, stickyWrapper, $(this),stickyHeight);
+                }, 100) //3
+            });
+            // On page load
+            stickyToggle(sticky, stickyWrapper, $(window),stickyHeight);
+        });
+
+        //-------------------------------------------------
+        // Menu
+        //-------------------------------------------------
         var header_sticky = $('.header--sticky')
         if(header_sticky.offset().top > 1){
             header_sticky.addClass("active")
