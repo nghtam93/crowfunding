@@ -749,6 +749,10 @@ a:hover {
       padding-right: calc(var(--bs-gutter-x) * .5);
       padding-left: calc(var(--bs-gutter-x) * .5); }
 
+@media (min-width: 992px) {
+  .new__slider .flickity-prev-next-button {
+    display: none; } }
+
 .new__item {
   margin-bottom: 30px; }
   .new__item .el__thumb {

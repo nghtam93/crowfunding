@@ -215,6 +215,13 @@
 }
 
 
+.new__slider{
+    @media ( min-width: 992px ) {
+        .flickity-prev-next-button {
+            display: none;
+        }
+    }
+}
 
 .new__item{
     margin-bottom: 30px;
