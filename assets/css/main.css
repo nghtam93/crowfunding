@@ -66,6 +66,9 @@ a:hover {
   .row {
     --bs-gutter-x: 2rem; }
 
+  .col-lg-20 {
+    width: 20%; }
+
   .col-lg-34 {
     width: 34.5%; }
 
@@ -124,11 +127,13 @@ a:hover {
 .dnfix__thumb.-contain img {
   object-fit: contain; }
 
+/*button*/
 .btn__primary {
+  display: inline-block;
   font-size: 17px;
   font-weight: 500;
   line-height: normal;
-  padding: 7px 15px;
+  padding: 7px 30px;
   border: 2px solid #000;
   border-radius: 40px !important;
   background-color: #fff;
@@ -140,6 +145,26 @@ a:hover {
   .btn__primary.-small {
     min-width: 180px; }
 
+.btn__secondary {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 8px 30px;
+  border: 2px solid #41BECE;
+  border-radius: 2px;
+  background-color: #41BECE;
+  min-width: 300px;
+  color: #fff;
+  margin-bottom: 10px; }
+  .btn__secondary:hover {
+    background-color: #FF6B1D;
+    border-color: #FF6B1D;
+    color: #fff; }
+  .btn__secondary.-small {
+    min-width: 180px; }
+
+/**/
 .sc__header {
   position: relative;
   margin-bottom: 50px; }
@@ -241,6 +266,37 @@ a:hover {
       position: absolute;
       left: 0;
       color: #F69D38; }
+
+/*rateit.js*/
+.rateit.-icomoon .rateit-reset {
+  display: none !important; }
+.rateit.-icomoon .rateit-range {
+  height: 25px;
+  background: transparent;
+  overflow: hidden; }
+  .rateit.-icomoon .rateit-range::before {
+    content: "\e907\e907\e907\e907\e907";
+    display: block;
+    font-family: 'icomoon';
+    font-size: 25px; }
+.rateit.-icomoon .rateit-hover {
+  background: transparent;
+  overflow: hidden; }
+  .rateit.-icomoon .rateit-hover::before {
+    display: block;
+    content: "\e906\e906\e906\e906\e906";
+    font-family: 'icomoon';
+    font-size: 25px;
+    color: #F69D38; }
+.rateit.-icomoon .rateit-selected {
+  background: transparent;
+  overflow: hidden; }
+  .rateit.-icomoon .rateit-selected::before {
+    content: "\e906\e906\e906\e906\e906";
+    font-family: 'icomoon';
+    display: block;
+    font-size: 25px;
+    color: #F69D38; }
 
 /*
 ======================================
@@ -1313,20 +1369,111 @@ body:not(.home) .sc-footer {
   color: #B2B2B2; }
 .sc-review-list .el__comment {
   line-height: 19px; }
+.sc-review-list__readmore {
+  margin-bottom: 80px; }
+@media (max-width: 767px) {
+  .sc-review-list .el__thumb {
+    width: 60px;
+    padding-top: 60px;
+    margin-right: 10px; } }
 @media (max-width: 575px) {
   .sc-review-list {
     margin-right: -.75rem;
     margin-left: -.75rem; }
-    .sc-review-list .el__thumb {
-      width: 60px;
-      padding-top: 60px;
-      margin-right: 10px; }
+    .sc-review-list .item__rating {
+      margin-bottom: 10px; }
     .sc-review-list .el__meta {
       border: 0;
       padding: 1rem; }
       .sc-review-list .el__meta::before {
         display: none; }
       .sc-review-list .el__meta__mb {
-        display: flex; } }
+        display: flex;
+        align-items: center; } }
+
+.single-fund__tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px; }
+  .single-fund__tag li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #FF6B1D;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 1px 9px;
+    color: #FF6B1D; }
+    .single-fund__tag li:not(:last-child) {
+      margin-right: 5px; }
+.single-fund__summary {
+  border-top: 3px solid #FF6B1D; }
+  .single-fund__summary ul {
+    font-size: 18px; }
+  .single-fund__summary li {
+    display: flex;
+    padding: 30px 0; }
+    .single-fund__summary li:first-child .el__label {
+      font-weight: 700; }
+    .single-fund__summary li:first-child .el__value {
+      color: #FF6B1D; }
+    .single-fund__summary li:not(:last-child) {
+      border-bottom: 1px dashed #ccc; }
+  .single-fund__summary .el__value {
+    margin-left: auto;
+    text-align: right; }
+    .single-fund__summary .el__value__sub {
+      font-size: 14px;
+      color: #707070; }
+.single-fund__content {
+  margin-top: 50px;
+  margin-bottom: 100px; }
+  .single-fund__content .entry-content__text {
+    max-width: 570px;
+    margin: 0 auto 80px; }
+.single-fund__table {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px; }
+  .single-fund__table tr td {
+    vertical-align: middle;
+    padding: 24px 30px 20px; }
+    .single-fund__table tr td[rowspan="3"] + td {
+      background-color: #ECF9FA; }
+    .single-fund__table tr td:first-child {
+      background-color: #ECF9FA;
+      width: 14%; }
+@media (max-width: 575px) {
+  .single-fund__table {
+    font-size: 14px; }
+    .single-fund__table tr td {
+      padding: 24px 10px 20px; }
+      .single-fund__table tr td:first-child {
+        background-color: #ECF9FA;
+        width: 25%; } }
+
+.product-gallery {
+  margin-bottom: 40px; }
+  .product-gallery .carousel {
+    margin-bottom: 20px; }
+    .product-gallery .carousel-nav {
+      --bs-gutter-x: 10px;
+      margin-left: -5px;
+      margin-right: -5px;
+      padding-left: 50px;
+      padding-right: 50px; }
+      .product-gallery .carousel-nav .is-selected .el__thumb {
+        border: 2px solid #FF6B1D; }
+      .product-gallery .carousel-nav .el__thumb {
+        padding-top: 100%;
+        border: 2px solid #dfdfdf; }
+  .product-gallery .flickity-button {
+    background: transparent; }
+    .product-gallery .flickity-button-icon {
+      fill: #FF6B1D; }
+  @media (min-width: 768px) {
+    .product-gallery .carousel-main .flickity-button {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

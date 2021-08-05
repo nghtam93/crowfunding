@@ -75,6 +75,9 @@ a:hover{text-decoration:none;}
     .row {
         --bs-gutter-x: 2rem;
     }
+    .col-lg-20{
+        width: 20%;
+    }
 	.col-lg-34{
         width: 34.5%;
     }
@@ -101,11 +104,13 @@ a:hover{text-decoration:none;}
 .dnfix__thumb img{margin:0px auto;position:absolute;width:100%;height:100%;top:0;left:0;object-fit:cover}
 .dnfix__thumb.-contain img{object-fit:contain;}
 
+/*button*/
 .btn__primary{
+    display: inline-block;
     font-size: 17px;
     font-weight: 500;
     line-height: normal;
-    padding: 7px 15px;
+    padding: 7px 30px;
     border: 2px solid #000;
     border-radius: 40px!important;
     background-color: #fff;
@@ -120,6 +125,28 @@ a:hover{text-decoration:none;}
     }
 }
 
+.btn__secondary{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 8px 30px;
+    border: 2px solid $color_primary;
+    border-radius: 2px;
+    background-color: $color_primary;
+    min-width: 300px;
+    color: #fff;
+    margin-bottom: 10px;
+    &:hover{
+        background-color: $color_secondary;
+        border-color: $color_secondary;
+        color: #fff;
+    }
+    &.-small{
+        min-width: 180px;
+    }
+}
+/**/
 .sc__header{
     position: relative;
     margin-bottom: 50px;
@@ -239,3 +266,49 @@ a:hover{text-decoration:none;}
         }
     }
 }
+
+/*rateit.js*/
+.rateit{
+    &.-icomoon{
+
+        .rateit-reset{
+            display: none!important;
+        }
+        .rateit-range{
+            height: 25px;
+            background:transparent;
+            overflow: hidden;
+            &::before{
+                content: "\e907\e907\e907\e907\e907";
+                display: block;
+                font-family: 'icomoon';
+                font-size: 25px;
+            }
+        }
+        .rateit-hover{
+            background:transparent;
+            overflow: hidden;
+            &::before{
+                display: block;
+                content: "\e906\e906\e906\e906\e906";
+                font-family: 'icomoon';
+                font-size: 25px;
+                color: #F69D38;
+            }
+        }
+        .rateit-selected{
+            background:transparent;
+            overflow: hidden;
+            &::before{
+                content: "\e906\e906\e906\e906\e906";
+                font-family: 'icomoon';
+                display: block;
+                font-size: 25px;
+                color: #F69D38;
+            }
+        }
+        
+    }
+}
+
+

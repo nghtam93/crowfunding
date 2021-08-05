@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="./assets/libs/flickity/flickity.min.css"/>
     <script src="assets/libs/flickity/flickity.pkgd.min.js"></script>
 
+    <!--star-rating-->
+    <link rel="stylesheet" href="./assets/libs/rateit.js/rateit.css"/>
+    <script src="assets/libs/rateit.js/jquery.rateit.js"></script>
+
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <title>口コミ投稿</title>
@@ -106,18 +110,7 @@
                         <div class="mb-3 row">
                             <label for="" class="col-sm-3 col-form-label">評価 :</label>
                             <div class="input-group-lg col-sm-9 d-flex align-items-center">
-                                <div class="rate">
-                                    <input type="radio" id="star5" name="rate" value="5" />
-                                    <label for="star5" title="text">5 stars</label>
-                                    <input type="radio" id="star4" name="rate" value="4" />
-                                    <label for="star4" title="text">4 stars</label>
-                                    <input type="radio" id="star3" name="rate" value="3" />
-                                    <label for="star3" title="text">3 stars</label>
-                                    <input type="radio" id="star2" name="rate" value="2" />
-                                    <label for="star2" title="text">2 stars</label>
-                                    <input type="radio" id="star1" name="rate" value="1" />
-                                    <label for="star1" title="text">1 star</label>
-                                  </div>
+                                <div class="rateit -icomoon d-flex align-items-center" data-rateit-starwidth="25" data-rateit-starheight="25"></div> 
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -153,10 +146,6 @@
             </div>
         </div>
         
-    
-
-      
-
         <section class="sc-3box">
             <div class="container">
                 <div class="row">
@@ -259,7 +248,6 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-
 	    ClassicEditor
 		.create( document.querySelector( '#editor' ), {
 			toolbar: {
@@ -285,10 +273,6 @@
 
         (function($){
 
-            $(".js-range-slider").ionRangeSlider({
-                skin: "round",
-                type: "double",
-            });
         })(jQuery);
 
         

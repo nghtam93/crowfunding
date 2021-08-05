@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src='assets/js/jquery.min.3.5.1.js' id='jquery-core-js'></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--icomoon-->
+    <link rel="stylesheet" href="./assets/css/animate.min.css"/>
+    <!--icomoon-->
+    <link rel="stylesheet" href="./assets/libs/icomoon/style.css"/>
+    <!--rangeSlider-->
+    <link rel="stylesheet" href="assets/libs/ion-rangeSlider/css/ion.rangeSlider.min.css"/>
+    <script src="assets/libs/ion-rangeSlider/js/ion.rangeSlider.min.js"></script>
+
+    <!--flickity-->
+    <link rel="stylesheet" href="./assets/libs/flickity/flickity.min.css"/>
+    <script src="assets/libs/flickity/flickity.pkgd.min.js"></script>
+    <!--fancybox-->
+    <link rel="stylesheet" href="./assets/libs/fancybox/jquery.fancybox.min.css"/>
+    <script src="assets/libs/fancybox/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <title>ファンドの詳細</title>
+  </head>
+  <body class="single">
+    <div class="wrapper">
+
+        <header class="header header--sticky" data-toggle="sticky-onscroll">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="#menu__mobile" class="menu-mb__btn">
+                    <span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span>
+                </a>
+                <div class="header__brand">
+                    <a href="index.html" class="header--logo">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <nav class="main__nav ms-auto">
+                    <ul class="dn__menu d-none d-lg-block">
+                        <li class="menu-item "><a href="#">ファンド検索</a></li>
+                        <li class="menu-item "><a href="#">ソーシャルレンディング業者一覧</a></li>
+                        <li class="menu-item "><a href="#">クチコミ・レビュー</a></li>
+                        <li class="menu-item "><a href="#">投資に関するコラム</a></li>
+                        <li class="menu-item "><a href="#">ニュース</a></li>
+                    </ul>
+                </nav>
+                <button class="header__search--btn btn" type="submit" data-bs-toggle="modal" data-bs-target="#modalSearch"><span class="icon-search"></span></button>
+            </div>
+        </header>
+
+        <nav class="main__nav d-md-none">
+            <ul class="dn__menu">
+                <li class="menu-item "><a href="#">ファンド検索</a></li>
+                <li class="menu-item "><a href="#">ソーシャルレンディング業者一覧</a></li>
+                <li class="menu-item "><a href="#">クチコミ・レビュー</a></li>
+                <li class="menu-item "><a href="#">投資に関するコラム</a></li>
+                <li class="menu-item "><a href="#">ニュース</a></li>
+            </ul>
+        </nav>
+
+        <div class="dn__breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+            <div class="container-fluid">
+                <span><a href="#" class="home"><span>TOP</span></a></span> ＞  
+                <span>～～～の詳細</span>  
+            </div>
+        </div>
+        <div class="wrap__page">   
+            <div class="container">
+                <header class="page__header mb-3">
+                    <h1 class="page__header__title">～～～の詳細</h1>
+                </header><!-- .page-header -->
+
+                <ul class="single-fund__tag">
+                    <li>1万円より</li>
+                    <li>償還時配当</li>
+                    <li>抽選式</li>
+                    <li>抽選式</li>
+                </ul>
+
+                <div class="single-fund__main">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="product-gallery">
+                                <div class="carousel carousel-main"
+                                data-flickity='{
+                                        "cellAlign": "center",
+                                        "wrapAround": true,
+                                        "autoPlay": false,
+                                        "prevNextButtons":true,
+                                        "adaptiveHeight": true,
+                                        "imagesLoaded": true,
+                                        "lazyLoad": 1,
+                                        "dragThreshold" : 15,
+                                        "pageDots": false,
+                                        "rightToLeft": false
+                                }'>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <a href="images/fund-details/fund-01.png" data-fancybox="group">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel carousel-nav"
+                                data-flickity='{
+                                        "cellAlign": "left",
+                                        "wrapAround": false,
+                                        "autoPlay": false,
+                                        "prevNextButtons": true,
+                                        "asNavFor": ".carousel-main",
+                                        "percentPosition": true,
+                                        "imagesLoaded": true,
+                                        "pageDots": false,
+                                        "rightToLeft": false,
+                                        "contain": true
+                                    }'
+                                >
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                    <div class="el__col col-3 col-lg-20">
+                                        <div class="el__thumb dnfix__thumb">
+                                            <img src="images/fund-details/fund-01.png" />
+                                        </div>
+                                    </div>
+                                 
+                                </div><!-- .product-thumbnails -->
+                            </div> 
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="single-fund__summary">
+
+                                <ul>
+                                    <li>
+                                        <div class="el__label">想定利回り（年利）</div>
+                                        <div class="el__value">15.0%</div>
+                                    </li>
+                                    <li>
+                                        <div class="el__label">想定運用期間</div>
+                                        <div class="el__value">3ヶ月</div>
+                                    </li>
+                                    <li>
+                                        <div class="el__label">募集総額</div>
+                                        <div class="el__value">
+                                            3,960万円
+                                            <div class="el__value__sub">
+                                                成立下限額 12,00万円
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="el__label">一口出資金額</div>
+                                        <div class="el__value">1万円</div>
+                                    </li>
+                                    <li>
+                                        <div class="el__label">初回配当予定日</div>
+                                        <div class="el__value">3月</div>
+                                    </li>
+                                    <li>
+                                        <div class="el__label">募集期間</div>
+                                        <div class="el__value">08/09〜 08/28</div>
+                                    </li>
+                                </ul>
+
+                                <div class="mt-3 text-center">
+                                    <a href="" class="btn__secondary">クラウドビルズ HPへ</a>
+                                    <a href="" class="btn__secondary">サービスについて詳細</a>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-fund__content">
+                    <header class="page__header">
+                        <h2 class="page__header__title">募集概要</h2>
+                    </header><!-- .page-header -->
+                    <div class="entry-content">
+                        <div class="entry-content__text">
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+
+
+ 
+
+
+                        <table class="single-fund__table table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">募集総額</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">運用タイプ</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">募集方式</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">貸付先数</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">予定利回り</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">匿名組合の償還予定日</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">募集開始日</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">投資実行日</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">償還方法</td>
+                                    <td>元本</td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td>利益配当</td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td>早期償還</td>
+                                    <td></td>
+                                    </tr>
+                                <tr>
+                                    <td colspan="2">償還方法</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">担保</td>
+                                    <td></td>
+                                </tr>
+                              </tbody>
+                        </table>
+
+                        <div class="text-center">
+                            <a class="btn btn__primary mb-sm-3">さらに詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <section class="sc-3box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex wow animate__animated animate__fadeInLeft">
+                        <div class="el__item"></div>
+                    </div>
+                    <div class="col-md-4 d-flex wow animate__animated animate__fadeInUp">
+                        <div class="el__item"></div>
+                    </div>
+                    <div class="col-md-4 wow animate__animated animate__fadeInRight">
+                        <div class="el__item -text">
+                            <h3 class="el__title">クラファンなび</h3>
+                            <div class="d-flex">
+                                <div class="el__excerpt flex-grow-1">
+                                    取材のご依頼や、<br>広告掲載に関する<br>お問い合わせはこちら
+                                </div>
+                                <div class="el__icon">
+                                    <span class="icon-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="sc-footer">
+            <div class="container">
+                <ul class="box-social">
+                    <li><a href=""><span class="icon-twitter"></span></a></li>
+                    <li><a href=""><span class="icon-facebook"></span></a></li>
+                    <li><a href=""><span class="icon-instagram"></span></a></li>
+                </ul>
+                <hr>
+
+                <nav class="footer__nav">
+                    <ul class="">
+                        <li class="menu-item"><a href="">クラファンなびについて</a></li>
+                        <li class="menu-item"><a href="">お問い合わせ</a></li>
+                        <li class="menu-item"><a href="">プライバシーポリシー</a></li>
+                        <li class="menu-item"><a href="">利用規約</a></li>
+                        <li class="menu-item"><a href="">運営会社</a></li>
+                    </ul>
+                </nav>
+
+                <div class="sc-copyright">
+                    <p>©︎ finstar Inc. All right reserved</p>
+                </div>
+            </div>
+        </footer>
+
+    </div> <!-- end wrapper -->
+
+    <!-- Modal -->
+    <div class="modal modal-search fade" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form role="search" method="get" class="search-form" action="">
+                    <input type="search" class="search-field form-control" placeholder="Search ..." name="s" />
+                    <button class="search-submit" type="submit"><span class="icon-search"></span></button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <nav id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__content">
+            <ul class="nav__mobile--ul">
+                <li class="menu-item menu-item-has-children"><a href="">クラファンなび</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="">ファンドの詳細</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="">ファンド検索/一覧</a></li>
+                <li class="menu-item menu-item-has-children"><a href="">ソーシャルレンディング</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="">ソーシャルレンディング企業の詳細</a></li>
+                        <li class="menu-item"><a href="">口コミレビュー一覧</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="">投資に関するコラム</a></li>
+                <li class="menu-item"><a href="">ソーシャルレンディングニュース</a></li>
+                <li class="menu-item"><a href="">用語集</a></li>
+                <li class="menu-item"><a href="">運営者</a></li>
+                <li class="menu-item"><a href="">プライバシーポリシー</a></li>
+                <li class="menu-item"><a href="">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src='assets/js/wow.min.js'></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        (function($){
+
+            $(".js-range-slider").ionRangeSlider({
+                skin: "round",
+                type: "double",
+            });
+
+        })(jQuery);
+
+        
+    </script>
+
+</body>
+</html>

@@ -61,20 +61,26 @@
             line-height: 19px;
         }
     }
-    @media ( max-width: 991px ) {
-
+    &__readmore{
+        margin-bottom: 80px;
     }
-    @media ( max-width: 575px ) {
-
-        margin-right: -.75rem;
-        margin-left: -.75rem;
-    
+    @media ( max-width: 767px ) {
         .el{
             &__thumb{
                 width: 60px;
                 padding-top: 60px;
                 margin-right: 10px;
             }
+        }
+    }
+    @media ( max-width: 575px ) {
+
+        margin-right: -.75rem;
+        margin-left: -.75rem;
+        .item__rating{
+            margin-bottom: 10px;
+        }
+        .el{
             
             &__meta{
                 border: 0;
@@ -82,10 +88,12 @@
                 &::before{
                     display: none;
                 }
-                &__mb {
+                &__mb{
                     display: flex;
+                    align-items: center;
                 }
             }
+            
         }
     
         
