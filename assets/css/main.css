@@ -6,6 +6,30 @@
   color: #FF6B1D; }
 
 @font-face {
+  font-family: 'Corporate Logo';
+  src: url("../fonts/CorporateLogoBold/Corporate-Logo-Bold.woff2") format("woff2"), url("../fonts/CorporateLogoBold/Corporate-Logo-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Meiryo';
+  src: url("../fonts/MeiryoW53/MeiryoW53-Regular.woff2") format("woff2"), url("../fonts/MeiryoW53/MeiryoW53-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'HiraKakuProW3';
+  src: url("../fonts/HiraKakuProW3/HiraKakuPro-W3-AlphaNum.woff2") format("woff2"), url("../fonts/HiraKakuProW3/HiraKakuPro-W3-AlphaNum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'YuGo';
+  src: url("../fonts/YuGo-Medium/YuGo-Medium-AlphaNum.woff2") format("woff2"), url("../fonts/YuGo-Medium/YuGo-Medium-AlphaNum.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
   font-family: 'Lato';
   src: url("../fonts/Lato/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato/Lato-Bold.woff") format("woff");
   font-weight: bold;
@@ -1395,7 +1419,8 @@ body:not(.home) .sc-footer {
   font-weight: 400;
   color: #B2B2B2; }
 .sc-review-list .el__comment {
-  line-height: 19px; }
+  line-height: 19px;
+  font-family: 'Meiryo'; }
 .sc-review-list__readmore {
   margin-bottom: 80px; }
 @media (max-width: 767px) {
@@ -1449,7 +1474,8 @@ body:not(.home) .sc-footer {
       border-bottom: 1px dashed #ccc; }
   .single-fund__summary .el__value {
     margin-left: auto;
-    text-align: right; }
+    text-align: right;
+    font-family: 'HiraKakuProW3'; }
     .single-fund__summary .el__value__sub {
       font-size: 14px;
       color: #707070; }
@@ -1584,7 +1610,8 @@ body:not(.home) .sc-footer {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
-  padding: 40px 40px 20px; }
+  padding: 40px 40px 20px;
+  font-family: YuGo; }
   .table-of-contents .el__header {
     text-align: center;
     margin-bottom: 30px; }
