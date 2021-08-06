@@ -6,7 +6,7 @@
   color: #FF6B1D; }
 
 @font-face {
-  font-family: 'Corporate Logo';
+  font-family: 'Corporate Logo Bold';
   src: url("../fonts/CorporateLogoBold/Corporate-Logo-Bold.woff2") format("woff2"), url("../fonts/CorporateLogoBold/Corporate-Logo-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -826,7 +826,7 @@ body:not(.home) .sc-footer {
   .sc-banner .el__header {
     margin-bottom: 50px; }
     .sc-banner .el__header__title {
-      font-size: 28px;
+      font-size: 30px;
       line-height: 1.6;
       margin-bottom: 15px;
       font-family: 'Corporate Logo Bold';
@@ -942,7 +942,8 @@ body:not(.home) .sc-footer {
         margin-right: 5px; }
   .product__item .el__sub {
     font-size: 14px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    font-family: 'Meiryo'; }
   .product__item .el__list {
     margin-bottom: 0;
     display: flex; }
@@ -1540,6 +1541,9 @@ body:not(.home) .sc-footer {
       fill: #FF6B1D; }
   @media (min-width: 768px) {
     .product-gallery .carousel-main .flickity-button {
+      display: none; } }
+  @media (max-width: 575px) {
+    .product-gallery .carousel-nav {
       display: none; } }
 
 .single-lenders__img {

@@ -150,4 +150,9 @@
             display: none;
         }
     }
+    @media ( max-width: 575px ) {
+        .carousel-nav{
+            display: none;
+        }
+    }
 }
