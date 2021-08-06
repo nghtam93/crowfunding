@@ -434,7 +434,7 @@ a:hover {
 .nav__mobile {
   display: block;
   position: fixed;
-  top: 85px;
+  top: 90px;
   height: 100%;
   left: -390px;
   width: 390px;
@@ -451,7 +451,7 @@ a:hover {
   pointer-events: none; }
   .nav__mobile__content {
     overflow-y: auto;
-    height: 100%; }
+    height: calc(100% - 90px); }
   .nav__mobile.active {
     left: 0;
     opacity: 1;
@@ -514,7 +514,9 @@ a:hover {
     transform: rotate(0); }
   @media (max-width: 991px) {
     .nav__mobile {
-      top: 60px; } }
+      top: 60px; }
+      .nav__mobile__content {
+        height: calc(100% - 60px); } }
   @media (max-width: 575px) {
     .nav__mobile {
       width: 100%; } }
@@ -859,10 +861,15 @@ body:not(.home) .sc-footer {
   border-bottom: 1px solid #ccc; }
   .product__item.-lenders .el__list li label {
     margin-bottom: 10px; }
-  .product__item.-lenders .el__list li .el__star {
-    font-size: 15px;
+    .product__item.-lenders .el__list li label.-text-fix {
+      letter-spacing: -3px; }
+  .product__item.-lenders .el__list li .star-rating {
+    position: relative;
+    top: 3px;
     margin-right: 20px;
     color: #F69D38; }
+    .product__item.-lenders .el__list li .star-rating span {
+      font-size: 10px; }
   .product__item.-lenders .el__list li p {
     top: 8px;
     font-size: 24px;
@@ -948,11 +955,22 @@ body:not(.home) .sc-footer {
         font-size: 22px;
         line-height: 22px; }
     .product__item .el__sub {
-      margin-bottom: 22px; } }
+      margin-bottom: 22px; }
+    .product__item.-lenders .el__list li {
+      padding: 0 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 62px; }
+      .product__item.-lenders .el__list li .star-rating {
+        margin: 0 auto 0; } }
   @media (max-width: 767px) {
     .product__item {
       padding-bottom: 40px;
       margin-bottom: 40px; }
+      .product__item .el__list li {
+        padding: 0 20px; }
       .product__item .el__title {
         margin-top: 0; }
       .product__item:first-child {
@@ -965,7 +983,12 @@ body:not(.home) .sc-footer {
       align-items: center;
       justify-content: center; }
       .product__item .el__list li {
-        padding: 0 10px; } }
+        padding: 0 15px; } }
+  @media (max-width: 410px) {
+    .product__item .el__list li {
+      padding: 0 10px; }
+    .product__item.-lenders .el__list li {
+      padding: 0 2px; } }
 
 .flickity {
   --bs-gutter-x:2rem;
@@ -1005,7 +1028,7 @@ body:not(.home) .sc-footer {
     font-size: 18px;
     font-weight: 700;
     line-height: 27px;
-    margin-bottom: 5px; }
+    margin-bottom: 0; }
     .new__item .el__title a {
       color: #000; }
     .new__item .el__title:hover a {
@@ -1032,18 +1055,10 @@ body:not(.home) .sc-footer {
   .new__item .el__sub {
     font-size: 14px; }
   @media (max-width: 1199px) {
-    .new__item .el__title {
-      min-height: 54px;
-      -webkit-line-clamp: 2;
-      margin-bottom: 5px; }
     .new__item .el__tag li {
       padding: 1px 5px; }
     .new__item .sc__readmore--text {
       margin-top: 0; } }
-  @media (max-width: 767px) {
-    .new__item .el__title {
-      min-height: auto;
-      -webkit-line-clamp: 1; } }
 
 .sc-customer {
   padding: 60px 0;
@@ -1195,7 +1210,8 @@ body:not(.home) .sc-footer {
   .sc-3box .el__excerpt {
     font-size: 20px;
     font-weight: 700;
-    line-height: 30px; }
+    line-height: 30px;
+    color: #000; }
   .sc-3box .el__icon {
     align-items: flex-end;
     display: flex;
@@ -1326,6 +1342,8 @@ body:not(.home) .sc-footer {
   @media (max-width: 575px) {
     .inquiry__box {
       margin-bottom: 0; }
+      .inquiry__box .btn__primary {
+        width: 100%; }
       .inquiry__box .box__content {
         padding: 20px 20px 30px; } }
 
@@ -1452,20 +1470,33 @@ body:not(.home) .sc-footer {
       background-color: #ECF9FA; }
     .single-fund__table tr td:first-child {
       background-color: #ECF9FA;
-      width: 14%; }
-@media (max-width: 575px) {
+      width: 14%;
+      min-width: 80px; }
+@media (max-width: 991px) {
   .single-fund__table {
-    font-size: 14px; }
+    font-size: 16px; }
     .single-fund__table tr td {
-      padding: 24px 10px 20px; }
-      .single-fund__table tr td:first-child {
-        background-color: #ECF9FA;
-        width: 25%; } }
+      padding: 24px 10px 20px; } }
+@media (max-width: 767px) {
+  .single-fund__table {
+    font-size: 14px; } }
+@media (max-width: 575px) {
+  .single-fund__table tr td:first-child {
+    background-color: #ECF9FA;
+    width: 25%; } }
 
 .product-gallery {
   margin-bottom: 40px; }
   .product-gallery .carousel {
     margin-bottom: 20px; }
+    .product-gallery .carousel .carousel-cell {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; }
+    .product-gallery .carousel .el__thumb {
+      padding-top: 70%; }
+      .product-gallery .carousel .el__thumb img {
+        object-fit: contain; }
     .product-gallery .carousel-nav {
       --bs-gutter-x: 10px;
       margin-left: -5px;
@@ -1506,7 +1537,7 @@ body:not(.home) .sc-footer {
   margin: 0 auto 70px; }
   .single-lenders__table tr td {
     vertical-align: middle;
-    padding: 20px 30px 14px 40px; }
+    padding: 20px 30px 14px 30px; }
     .single-lenders__table tr td:first-child {
       background-color: #ECF9FA;
       width: 18%;
