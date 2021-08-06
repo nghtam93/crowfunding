@@ -293,7 +293,7 @@
             font-size: 18px;
             font-weight: 700;
             line-height: 27px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             a{
                 color: #000;
             }
@@ -390,6 +390,7 @@
             font-size: 14px;
             font-weight: 500;
             margin-bottom: 2px;
+            overflow: hidden;
         }
         &__thumb{
             width: 60px;
