@@ -1544,7 +1544,9 @@ body:not(.home) .sc-footer {
       display: none; } }
   @media (max-width: 575px) {
     .product-gallery .carousel-nav {
-      display: none; } }
+      display: none; }
+    .product-gallery .flickity-button-icon {
+      fill: #fff; } }
 
 .single-lenders__img {
   margin-bottom: 40px; }
