@@ -233,6 +233,16 @@ a:hover {
     margin-left: 50px; }
   .sc__readmore--text:hover {
     color: #41BECE; }
+@media (max-width: 991px) {
+  .sc__readmore--text span {
+    margin-left: 30px; } }
+@media (max-width: 575px) {
+  .sc__readmore--text span {
+    margin-left: 15px; } }
+@media (max-width: 320px) {
+  .sc__readmore--text span {
+    margin-left: 5px;
+    font-size: 7px; } }
 
 .ck-editor__editable_inline {
   min-height: 230px; }
