@@ -998,6 +998,8 @@ body:not(.home) .sc-footer {
         padding: 0 20px; }
       .product__item .el__title {
         margin-top: 0; }
+        .product__item .el__title a {
+          -webkit-line-clamp: 2; }
       .product__item:first-child {
         border-top: 0;
         padding-top: 0; }
@@ -1014,6 +1016,9 @@ body:not(.home) .sc-footer {
       padding: 0 10px; }
     .product__item.-lenders .el__list li {
       padding: 0 2px; } }
+  @media (max-width: 375px) {
+    .product__item .el__list li {
+      padding: 0 8px; } }
 
 .flickity {
   --bs-gutter-x:2rem;
@@ -1084,6 +1089,9 @@ body:not(.home) .sc-footer {
       padding: 1px 5px; }
     .new__item .sc__readmore--text {
       margin-top: 0; } }
+  @media (max-width: 767px) {
+    .new__item .el__title a {
+      -webkit-line-clamp: 2; } }
 
 .sc-customer {
   padding: 60px 0;
