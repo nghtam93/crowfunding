@@ -279,7 +279,13 @@
             }
         }
     }
-
+    @media ( max-width: 375px ) {
+        .el__list{
+            li {
+                padding: 0 8px;
+            }
+        }
+    }
 }
 
 
